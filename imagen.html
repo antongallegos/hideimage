@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .linea1{
+            display: block;
+        }
+        #foto{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="linea1">
+        <img id="foto" src="descarga.jfif" alt="" width="100" height="123">
+        <img id="foto" src="descarga.jfif" alt="" width="100" height="123">
+        <img id="foto" src="descarga.jfif" alt="" width="100" height="123">
+        <img id="foto" src="descarga.jfif" alt="" width="100" height="123">
+    </div>
+    <div class="linea2">
+        <img id="foto" src="descarga.jfif" alt="" width="100" height="123">
+        <img id="foto" src="descarga.jfif" alt="" width="100" height="123">
+        <img id="foto" src="descarga.jfif" alt="" width="100" height="123">
+        <img id="foto" src="descarga.jfif" alt="" width="100" height="123">
+    </div>
+
+    <button id="reload">Reload</button>
+    <script>
+        $(document).ready(function(){
+        //adjunta un "click event listener" a todas las etiquetas img cuando el documento esté listo
+            $('img').click(function(){
+                $(this).hide();
+            });
+        });
+        $('#reload').click(function(){
+            $('img').show();
+        });
+    </script>
+</body>
+</html>
